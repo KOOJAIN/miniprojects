@@ -20,7 +20,8 @@
   - Naver OpenAPI 사용
   - PyQt5 / Qt Designer
 
-<img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png" width ="780" />
+<img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png?raw=true" width ="780" />
+
 
 ## DB연동 GUI 개발 학습
 
