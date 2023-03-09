@@ -62,9 +62,9 @@
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>30</x>
          <y>30</y>
-         <width>701</width>
+         <width>731</width>
          <height>26</height>
         </rect>
        </property>
@@ -114,7 +114,7 @@
      <x>10</x>
      <y>99</y>
      <width>781</width>
-     <height>371</height>
+     <height>391</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="resultLayout">
