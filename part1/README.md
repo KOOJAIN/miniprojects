@@ -30,8 +30,8 @@
   - pymysql 모듈 사용
   - PyQt5 / Qt Designer
 
-  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png?raw=true" width ="780" />
-  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png?raw=true" width ="780" />
+  <img src="C:\source\miniprojects\image\address.png" width ="780" />
+  <img src="C:\source\miniprojects\image\address2.png" width ="780" />
 
 ## 미니프로젝트 실습
 
