@@ -30,8 +30,7 @@
   - pymysql 모듈 사용
   - PyQt5 / Qt Designer
 
-  <img src="C:\source\miniprojects\image\address.png" width ="780" />
-  <img src="C:\source\miniprojects\image\address2.png" width ="780" />
+  ![주소록앱]
 
 ## 미니프로젝트 실습
 
