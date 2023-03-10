@@ -24,6 +24,14 @@
 
 
 ## DB연동 GUI 개발 학습
+- 주소록 프로그램 만들기
+  - Python 3.11.2
+  - MySQL 8.0
+  - pymysql 모듈 사용
+  - PyQt5 / Qt Designer
+
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png?raw=true" width ="780" />
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/naver_movie.png?raw=true" width ="780" />
 
 ## 미니프로젝트 실습
 
