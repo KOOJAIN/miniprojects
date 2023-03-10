@@ -30,7 +30,8 @@
   - pymysql 모듈 사용
   - PyQt5 / Qt Designer
 
-  ![주소록앱]
+  ![주소록앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address.png?raw=true)
+  ![주소록앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address2.png?raw=true)
 
 ## 미니프로젝트 실습
 
