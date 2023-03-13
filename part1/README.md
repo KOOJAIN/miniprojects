@@ -33,5 +33,16 @@
   ![주소록앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address.png?raw=true)
   ![주소록앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address2.png?raw=true)
 
+## 파이썬 관련 추가학습
+- QR코드 생성 앱
+  - qrcode 모듈
+  
+
+- 컴퓨터 정보출력 앱
+  - psutil 모듈
+  - socket 모듈
+  - requests 모듈
+  - PyQt
+  
 ## 미니프로젝트 실습
 
