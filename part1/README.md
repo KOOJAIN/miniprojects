@@ -37,12 +37,15 @@
 - QR코드 생성 앱
   - qrcode 모듈
   
+  ![QR코드앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address2.png?raw=true)
 
 - 컴퓨터 정보출력 앱
   - psutil 모듈
   - socket 모듈
   - requests 모듈
   - PyQt
-  
+
+  ![QR코드앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/address2.png?raw=true)
+
 ## 미니프로젝트 실습
 
