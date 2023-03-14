@@ -45,7 +45,14 @@
   - requests 모듈
   - PyQt
 
-  ![QR코드앱](https://github.com/KOOJAIN/miniprojects/blob/main/image/i.png?raw=true)
+  ![컴퓨터정보](https://github.com/KOOJAIN/miniprojects/blob/main/image/i.png?raw=true)
+
+  - TTS(Text To Speech)
+    - gtts 모듈
+    - playsound 모듈
+
+  - 암호해제 프로그램
+  -
 
 ## 미니프로젝트 실습
 
