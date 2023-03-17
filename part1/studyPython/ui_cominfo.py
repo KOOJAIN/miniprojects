@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\source\miniprojects\part1\studyPython\cominfo.ui'
+# Form implementation generated from reading ui file 'c:\source\miniprojects\part1\miniprojects\part1\studyPython\cominfo.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -73,7 +73,7 @@ class Ui_Form(object):
         self.lblInnerNet.setGeometry(QtCore.QRect(150, 20, 311, 16))
         self.lblInnerNet.setObjectName("lblInnerNet")
         self.btnRefresh = QtWidgets.QPushButton(Form)
-        self.btnRefresh.setGeometry(QtCore.QRect(290, 230, 100, 30))
+        self.btnRefresh.setGeometry(QtCore.QRect(309, 230, 81, 30))
         self.btnRefresh.setObjectName("btnRefresh")
 
         self.retranslateUi(Form)
