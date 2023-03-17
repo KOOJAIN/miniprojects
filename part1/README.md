@@ -58,7 +58,13 @@
   - 스레드 사용법
     - GUI 와 처리시간이 긴 로직을 실행하면 반드시 쓰레드 사용
 
+
   - 이메일 전송, 대량메일 전송
+
+  - 게임만들기 - DinoRun
+    -PyGame
+
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/dr.png?raw=true" width ="780" />
   
 
 ## 미니프로젝트 실습

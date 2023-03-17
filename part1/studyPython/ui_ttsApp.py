@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\source\miniprojects\part1\miniprojects\part1\miniprojects\part1\studyPython\ttsApp.ui'
+# Form implementation generated from reading ui file 'c:\source\miniprojects\part1\studyPython\ttsApp.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
