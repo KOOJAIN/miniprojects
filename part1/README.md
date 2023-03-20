@@ -78,9 +78,13 @@
 
   <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/folium_gui.png?raw=true" width ="780" />
   
+  - 계산기앱
+    - PyQt
+    - 16개 signal을 1개의 slot 함수로 처리
+
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/calc.png?raw=true" width ="250" />
 
 ## 미니프로젝트 실습
   - 테스트앱 만들기
 
-  []
 
