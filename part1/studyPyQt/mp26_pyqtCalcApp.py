@@ -45,11 +45,11 @@ class qtApp(QWidget):
             except:
                 self.txt_view.setText('ERROR')
         else:
-            if btn_val == 'X':
-                  btn_val = '*'
-            self.text_value += btn_val
-            print(self.text_value)
-            self.txt_view.setText(self.text_value)
+             if btn_val == 'X':
+                   btn_val = '*'
+             self.text_value += btn_val
+             print(self.text_value)
+             self.txt_view.setText(self.text_value)
     
 if __name__ == '__main__' :    
     app = QApplication(sys.argv)
