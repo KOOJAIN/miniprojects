@@ -65,6 +65,10 @@
     -PyGame
 
   <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/game.png?raw=true" width ="780" />
+
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/game.png?raw=true" width ="780" />
+  게임화면
+
   
 
 ## 미니프로젝트 실습
