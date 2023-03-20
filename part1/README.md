@@ -71,7 +71,12 @@
   게임화면
 
   - 전국대학교 위치맵
+    - Pandas
+    - folium
+    - PyQt
+      - QWebEnginView 추가
 
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/folium_gui.png?raw=true" width ="780" />
   
 
 ## 미니프로젝트 실습
