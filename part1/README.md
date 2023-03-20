@@ -66,7 +66,7 @@
 
   <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/game.png?raw=true" width ="780" />
 
-  <img src="C:\source\miniprojects\image\game.png?raw=true" width ="780" />
+  <img src="C:\source\miniprojects\image\game2.png?raw=true" width ="780" />
   게임화면
 
   
