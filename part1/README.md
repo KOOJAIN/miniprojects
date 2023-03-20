@@ -66,10 +66,16 @@
 
   <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/game.png?raw=true" width ="780" />
 
-  <img src="C:\source\miniprojects\image\game2.png?raw=true" width ="780" />
+  <img src="https://github.com/KOOJAIN/miniprojects/blob/main/image/game2.png?raw=true" width ="780" />
+  
   게임화면
+
+  - 전국대학교 위치맵
 
   
 
 ## 미니프로젝트 실습
+  - 테스트앱 만들기
+
+  []
 
