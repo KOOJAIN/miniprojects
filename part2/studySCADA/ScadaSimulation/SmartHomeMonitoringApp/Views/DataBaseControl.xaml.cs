@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp1
+namespace SmartHomeMonitoringApp.Views
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// DataBaseControl.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DataBaseControl : UserControl
     {
-        public MainWindow()
+        public DataBaseControl()
         {
             InitializeComponent();
         }

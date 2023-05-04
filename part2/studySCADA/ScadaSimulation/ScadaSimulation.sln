@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.33530.505
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusTestApp", "BogusTestApp\BogusTestApp.csproj", "{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogusTestApp", "BogusTestApp\BogusTestApp.csproj", "{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test용", "Test용", "{8E6D895C-4321-42C9-A033-F6F5735F9EB1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test용", "Test용", "{A9F9F036-DD92-4742-A87E-751A74804B31}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "시뮬레이션용", "시뮬레이션용", "{70D1AF8E-DF5F-4DCA-856F-FFA61002EF5D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Subscriber", "MQTT Subscriber", "{D6D08109-F669-4A19-A374-483F8657EF79}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT publicsher", "MQTT publicsher", "{1001B93C-5C9D-4450-B4C0-7C5B87FFA538}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Publisher", "MQTT Publisher", "{5950490C-4C25-4031-8676-B2613D4680E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MQTT Subscriber", "MQTT Subscriber", "{11292DFC-9803-4EAF-97A5-47044FEDF347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeIotDeviceApp", "FakeIotDeviceApp\FakeIotDeviceApp.csproj", "{83095EC2-0DEA-495A-9060-46299DFFAD86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeIotDeviceApp", "FakeIotDeviceApp\FakeIotDeviceApp.csproj", "{8BD892AF-3544-4CE7-8435-9977195E5A09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeMonitoringApp", "SmartHomeMonitoringApp\SmartHomeMonitoringApp.csproj", "{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,23 +21,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8BD892AF-3544-4CE7-8435-9977195E5A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8BD892AF-3544-4CE7-8435-9977195E5A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8BD892AF-3544-4CE7-8435-9977195E5A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8BD892AF-3544-4CE7-8435-9977195E5A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83095EC2-0DEA-495A-9060-46299DFFAD86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83095EC2-0DEA-495A-9060-46299DFFAD86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83095EC2-0DEA-495A-9060-46299DFFAD86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83095EC2-0DEA-495A-9060-46299DFFAD86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0087CAA6-8A9C-40D1-BBD7-8EED058D8BAE} = {8E6D895C-4321-42C9-A033-F6F5735F9EB1}
-		{8BD892AF-3544-4CE7-8435-9977195E5A09} = {1001B93C-5C9D-4450-B4C0-7C5B87FFA538}
+		{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2} = {A9F9F036-DD92-4742-A87E-751A74804B31}
+		{83095EC2-0DEA-495A-9060-46299DFFAD86} = {5950490C-4C25-4031-8676-B2613D4680E4}
+		{DBB07988-7B84-45C3-98FD-33F9DB4FA41A} = {D6D08109-F669-4A19-A374-483F8657EF79}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0418CD99-E7B5-4560-B0B7-69B3FA180F66}
+		SolutionGuid = {784C82A6-BBF6-4B8A-8ED8-231158AC03F3}
 	EndGlobalSection
 EndGlobal
