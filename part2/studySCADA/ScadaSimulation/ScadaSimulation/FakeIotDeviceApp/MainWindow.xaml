@@ -8,12 +8,12 @@
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:FakeIotDeviceApp"
     mc:Ignorable="d"
-    Title="Fake IOT Device" Height="500" Width="580" 
+    Title="Fake IOT Device" Height="580" Width="500" 
     MinHeight="400" MinWidth="500" Closing="MetroWindow_Closing">
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
             <iconPacks:PackIconSimpleIcons Kind="EclipseMosquitto" Foreground="White"
-                                           Margin="5,7,0,0" Width="24" />
+                                           Margin="5,7,0,0" Width="24"/>
         </DataTemplate>
     </mah:MetroWindow.IconTemplate>
     <Grid>
@@ -23,9 +23,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Label Content="MQTT Broker IP Address" VerticalAlignment="Center" />
+            <Label Content="MQTT Broker IP Address" VerticalAlignment="Center"/>
             <TextBox x:Name="TxtMqttBrokerIp" Width="250" Margin="5" VerticalAlignment="Center"
-                     mah:TextBoxHelper.Watermark="브로커 아이피를 입력하세요"  />
+                     mah:TextBoxHelper.Watermark="브로커 아이피를 입력하세요" />
             <Button x:Name="BtnConnect" Content="CONNECT" Margin="5"
                     Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="BtnConnect_Click"/>
         </StackPanel>
@@ -33,9 +33,9 @@
         <RichTextBox Grid.Row="1" x:Name="RtbLog" Margin="10" VerticalScrollBarVisibility="Visible">
             <RichTextBox.Resources>
                 <Style TargetType="{x:Type Paragraph}">
-                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="Margin" Value="0"/>
                 </Style>
             </RichTextBox.Resources>
-        </RichTextBox>
+        </RichTextBox> 
     </Grid>
 </mah:MetroWindow>

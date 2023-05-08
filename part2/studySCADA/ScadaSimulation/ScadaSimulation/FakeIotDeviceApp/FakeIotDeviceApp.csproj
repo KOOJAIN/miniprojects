@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83095EC2-0DEA-495A-9060-46299DFFAD86}</ProjectGuid>
+    <ProjectGuid>{1F23F07C-E717-43FB-ACB4-0455AA4E40A2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FakeIotDeviceApp</RootNamespace>
     <AssemblyName>FakeIotDeviceApp</AssemblyName>

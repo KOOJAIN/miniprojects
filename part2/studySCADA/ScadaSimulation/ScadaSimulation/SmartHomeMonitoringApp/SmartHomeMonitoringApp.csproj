@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DBB07988-7B84-45C3-98FD-33F9DB4FA41A}</ProjectGuid>
+    <ProjectGuid>{16EACD63-4FE1-453C-8215-FCFD91FDCEB4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SmartHomeMonitoringApp</RootNamespace>
     <AssemblyName>SmartHomeMonitoringApp</AssemblyName>
@@ -232,8 +232,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logics\Commons.cs" />
     <Compile Include="Views\DataBaseControl.xaml.cs">
       <DependentUpon>DataBaseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MqttPopupWindow.xaml.cs">
+      <DependentUpon>MqttPopupWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -248,6 +252,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\DataBaseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MqttPopupWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

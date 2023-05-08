@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E59736D6-E13C-4ADD-83EB-0A4E4AAE9BE2}</ProjectGuid>
+    <ProjectGuid>{50B74379-D69E-45EE-98BF-4CACBBD7B263}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BogusTestApp</RootNamespace>
     <AssemblyName>BogusTestApp</AssemblyName>
@@ -95,7 +95,7 @@
   <ItemGroup>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\SampleCustomerRepository.cs" />
+    <Compile Include="Models\SampleCustmerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
