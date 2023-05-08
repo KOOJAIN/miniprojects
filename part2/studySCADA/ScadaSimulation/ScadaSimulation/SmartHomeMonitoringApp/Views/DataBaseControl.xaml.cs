@@ -1,7 +1,9 @@
 ﻿using MahApps.Metro.Controls;
+using Newtonsoft.Json;
 using SmartHomeMonitoringApp.Logics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,9 +99,21 @@ namespace SmartHomeMonitoringApp.Views
         {
             var msg = Encoding.UTF8.GetString(e.Message);
             UpdateLog(msg);
-
+            SetToDataBase(msg, e.Topic); // 실제 DB에 저장처리
         }
 
-        
+        // DB 저장처리 메서드
+        private void SetToDataBase(string msg, string topic)
+        {
+            var currValue = JsonConvert.DeserializeObject<Dictionary<string, string>>(msg);
+            if (currValue != null)
+            {
+                Debug.WriteLine(currValue["Home_Id"]);
+                Debug.WriteLine(currValue["Room_Name"]);
+                Debug.WriteLine(currValue["Sensing_DateTime"]);
+                Debug.WriteLine(currValue["Temp"]);
+                Debug.WriteLine(currValue["Humid"]);
+            }
+        }
     }
 }
