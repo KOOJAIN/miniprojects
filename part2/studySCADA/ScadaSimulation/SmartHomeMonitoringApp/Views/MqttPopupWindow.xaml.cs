@@ -32,7 +32,7 @@ namespace SmartHomeMonitoringApp.Views
             Commons.BROKERHOST = TxtBrokerIp.Text;
             Commons.MQTTTOPIC = TxtTopic.Text;
 
-            this.DialogResult = true;
+            this.DialogResult = true; // 
             this.Close();
         }
 

@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using uPLibrary.Networking.M2Mqtt;
+﻿using uPLibrary.Networking.M2Mqtt;
 
 namespace SmartHomeMonitoringApp.Logics
 {
     public class Commons
     {
-        // 화면마다 공유할 MQTT 브로커 IP담을 변수
+        // 화면마다 공유할 MQTT 브로커 ip변수
         public static string BROKERHOST { get; set; } = "127.0.0.1";
 
         public static string MQTTTOPIC { get; set; } = "SmartHome/IoTData/";
 
         public static string MYSQL_CONNSTRING { get; set; } = "Server=localhost;" +
                                                 "Port=3306;" +
-                                                "DataBase=miniproject;" +
+                                                "Database=miniproject;" +
                                                 "Uid=root;" +
                                                 "Pwd=12345;";
 

@@ -1,10 +1,12 @@
 ﻿using MahApps.Metro.Controls;
+using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using SmartHomeMonitoringApp.Logics;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,29 +34,26 @@ namespace SmartHomeMonitoringApp.Views
             InitializeComponent();
         }
 
+
+        // 유저컨트롤 로드이벤트 핸들러
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             TxbBrokerUrl.Text = Commons.BROKERHOST;
             TxbMqttTopic.Text = Commons.MQTTTOPIC;
-            TxtConnstring.Text = Commons.MYSQL_CONNSTRING;
+            TxtConnString.Text = Commons.MYSQL_CONNSTRING;
 
-            IsConnected = false; // 아직 접속이안되있습
+            IsConnected = false;     // 아직 접속이 안되었음
             BtnConnDb.IsChecked = false;
         }
-       
-       
-        // 토글버튼 클릭이벤트 헨들러
 
+        // 토글버튼 클릭이벤트 핸들러
         private void BtnConnDb_Click(object sender, RoutedEventArgs e)
         {
             if (IsConnected == false)
-            {
-                BtnConnDb.IsChecked = true;
-                IsConnected = true;
-
-                // Mqtt 브로커에 접속
-
+            {               
+                // Mqtt 브로커 생성
                 Commons.MQTT_CLIENT = new uPLibrary.Networking.M2Mqtt.MqttClient(Commons.BROKERHOST);
+
                 try
                 {
                     // Mqtt subscribe(구독할) 로직
@@ -64,17 +63,16 @@ namespace SmartHomeMonitoringApp.Views
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Connect("MONITOR"); // clientId = 모니터
                         Commons.MQTT_CLIENT.Subscribe(new string[] { Commons.MQTTTOPIC },
-                                new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE }); // QOS는 네트워크 통신에 옵션
+                                new byte[] { MqttMsgBase.QOS_LEVEL_AT_LEAST_ONCE }); // QOS는 네트워크 통신에 옵선
                         UpdateLog(">>> MQTT Broker Connected");
-                        
-                        
+
                         BtnConnDb.IsChecked = true;
-                        IsConnected = true; // 예외가 발생하면 true 변경할 필요없습
+                        IsConnected = true; // 예외발생하면 true로 변경할 필요 없음
                     }
                 }
-                catch 
+                catch
                 {
-                    // pass
+                    // Pass.
                 }
             }
             else
@@ -86,12 +84,11 @@ namespace SmartHomeMonitoringApp.Views
 
         private void UpdateLog(string msg)
         {
-            this.Invoke(() =>
-            {
+            // 예외처리 필요!!
+            this.Invoke(() => {
                 TxtLog.Text += $"{msg}\n";
                 TxtLog.ScrollToEnd();
             });
-
         }
 
         // Subscribe가 발생할 때 이벤트핸들러
@@ -108,11 +105,35 @@ namespace SmartHomeMonitoringApp.Views
             var currValue = JsonConvert.DeserializeObject<Dictionary<string, string>>(msg);
             if (currValue != null)
             {
-                Debug.WriteLine(currValue["Home_Id"]);
-                Debug.WriteLine(currValue["Room_Name"]);
-                Debug.WriteLine(currValue["Sensing_DateTime"]);
-                Debug.WriteLine(currValue["Temp"]);
-                Debug.WriteLine(currValue["Humid"]);
+                //Debug.WriteLine(currValue["Home_Id"]);
+                //Debug.WriteLine(currValue["Room_Name"]);
+                //Debug.WriteLine(currValue["Sensing_DateTime"]);
+                //Debug.WriteLine(currValue["Temp"]);
+                //Debug.WriteLine(currValue["Humid"]);
+                try
+                {
+                    using (MySqlConnection conn = new MySqlConnection(Commons.MYSQL_CONNSTRING))
+                    {
+                        if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
+                        string insQuery = "INSERT INTO smarthomesensor ...";
+
+                        MySqlCommand cmd = new MySqlCommand(insQuery, conn);
+                        cmd.Parameters.AddWithValue("@Home_Id", currValue["Home_Id"]);
+                        // ... 파라미터 다섯개 
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            UpdateLog(">>> DB Insert succeed.");
+                        }
+                        else
+                        {
+                            UpdateLog(">>> DB Insert failed."); // 일어날일이 거의 없음
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    UpdateLog($"!!! Erorr 발생 : {ex.Message}");
+                }
             }
         }
     }
