@@ -46,13 +46,28 @@ namespace SmartHomeMonitoringApp.Views
 
             IsConnected = false;     // 아직 접속이 안되었음
             BtnConnDb.IsChecked = false;
+
+            if (Commons.MQTT_CLIENT != null && Commons.MQTT_CLIENT.IsConnected)
+            {
+                IsConnected = true;
+                BtnConnDb.Content = "MQTT 연결중";
+                BtnConnDb.IsChecked = true;
+                Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
+
+            }
         }
 
         // 토글버튼 클릭이벤트 핸들러
+
         private void BtnConnDb_Click(object sender, RoutedEventArgs e)
         {
+            ConnectDB();
+        }
+
+        private void ConnectDB()
+        {
             if (IsConnected == false)
-            {               
+            {
                 // Mqtt 브로커 생성
                 Commons.MQTT_CLIENT = new uPLibrary.Networking.M2Mqtt.MqttClient(Commons.BROKERHOST);
 
@@ -60,7 +75,7 @@ namespace SmartHomeMonitoringApp.Views
                 {
                     // Mqtt subscribe(구독할) 로직
                     if (Commons.MQTT_CLIENT.IsConnected == false)
-                    {                       
+                    {
                         // Mqtt 접속
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Connect("MONITOR"); // clientId = 모니터
@@ -86,12 +101,12 @@ namespace SmartHomeMonitoringApp.Views
                     {
                         Commons.MQTT_CLIENT.MqttMsgPublishReceived -= MQTT_CLIENT_MqttMsgPublishReceived;
                         Commons.MQTT_CLIENT.Disconnect();
-                        UpdateLog(">>> MQTT Broker Disconnected...");   
+                        UpdateLog(">>> MQTT Broker Disconnected...");
 
                         BtnConnDb.IsChecked = false;
                         BtnConnDb.Content = "MQTT 연결종료";
                         IsConnected = false;
-                    }                    
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -99,7 +114,6 @@ namespace SmartHomeMonitoringApp.Views
                 }
             }
         }
-
         private void UpdateLog(string msg)
         {
             // 예외처리 필요!!

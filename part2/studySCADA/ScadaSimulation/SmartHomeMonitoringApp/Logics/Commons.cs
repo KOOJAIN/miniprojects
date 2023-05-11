@@ -16,6 +16,6 @@ namespace SmartHomeMonitoringApp.Logics
                                                 "Pwd=12345;";
 
         // MQTT 클라이언트 공용 객체
-        public static MqttClient MQTT_CLIENT { get; set; }
+        public static MqttClient MQTT_CLIENT { get; set; } // 시작하면 공용으로 만들고 있습 (Database, RealTime에서 사용할 예정)
     }
 }
