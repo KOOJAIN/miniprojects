@@ -97,11 +97,6 @@ namespace SmartHomeMonitoringApp
             this.MetroWindow_Closing(sender, new CancelEventArgs());
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void MnuDataBaseMon_Click(object sender, RoutedEventArgs e)
         {
             ActiveItem.Content = new Views.DataBaseControl();
@@ -118,6 +113,13 @@ namespace SmartHomeMonitoringApp
         {
             ActiveItem.Content = new Views.VisualizationControl();
             StsSelScreen.Content = "Visualization View";
+        }
+
+        private void MnuAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var about = new About();
+            about.Owner = this;
+            about.ShowDialog();
         }
     }
 }

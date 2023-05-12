@@ -49,7 +49,7 @@
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="화면" Click="MenuItem_Click">
+                <MenuItem Header="화면">
                     <MenuItem.Icon>
                         <iconPacks:PackIconJamIcons Kind="ScreenF" />
                     </MenuItem.Icon>
@@ -80,7 +80,7 @@
                         <iconPacks:PackIconMaterial Kind="HelpBox" />
                     </MenuItem.Icon>
 
-                    <MenuItem x:Name="MnuAbout" Header="이 프로그램">
+                    <MenuItem x:Name="MnuAbout" Header="이 프로그램" Click="MnuAbout_Click">
                         <MenuItem.Icon>
                             <iconPacks:PackIconBoxIcons Kind="SolidInfoSquare" />
                         </MenuItem.Icon>
