@@ -42,10 +42,12 @@
                 <DatePicker x:Name="DtpEnd" Width="105" FontSize="14" VerticalAlignment="Center" />
             </StackPanel>
 
-            <Button Grid.Column="2" Content="검색" Margin="10,10" Width="80" 
-                    Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="Button_Click" />
+
+            <Button Grid.Column="2" x:Name="BtnSearch" Content="검색" Margin="10,10" Width="80" 
+                    Style="{StaticResource MahApps.Styles.Button.Dialogs.Accent}" Click="btnSearch_Click"/>
         </Grid>
-        <oxy:PlotView Gird.Row="2" Margin="10">
+        <oxy:PlotView Grid.Row="2" Margin="10" Background="Gainsboro">
+            
         </oxy:PlotView>
     </Grid>
 </UserControl>
